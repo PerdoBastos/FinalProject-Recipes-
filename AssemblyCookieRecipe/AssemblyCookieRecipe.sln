@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyCookieRecipe.ConsoleApp", "AssemblyCookieRecipe\AssemblyCookieRecipe.ConsoleApp.csproj", "{24063C3C-C3AF-403D-ADB9-593C734B4EC8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{32044F19-953C-457D-B349-A48B1ACA5FD4} = {32044F19-953C-457D-B349-A48B1ACA5FD4}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyCookieRecipe.Model", "AssemblyCookieRecipe.Model\AssemblyCookieRecipe.Model.csproj", "{E9588807-B915-46FC-9334-6584A3C1B7D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyCookieRecipe.Repository", "AssemblyCookieRecipe.Repository\AssemblyCookieRecipe.Repository.csproj", "{BD0DF790-CCBC-4D4E-A670-946E73685F30}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9588807-B915-46FC-9334-6584A3C1B7D6} = {E9588807-B915-46FC-9334-6584A3C1B7D6}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyCookieRecipe.Service", "AssemblyCookieRecipe.Service\AssemblyCookieRecipe.Service.csproj", "{32044F19-953C-457D-B349-A48B1ACA5FD4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD0DF790-CCBC-4D4E-A670-946E73685F30} = {BD0DF790-CCBC-4D4E-A670-946E73685F30}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyCookieRecipe.WebApp", "AssemblyCookieRecipe.WebApp\AssemblyCookieRecipe.WebApp.csproj", "{F93F4114-2970-4880-BCDA-2D6DC397216D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{32044F19-953C-457D-B349-A48B1ACA5FD4} = {32044F19-953C-457D-B349-A48B1ACA5FD4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24063C3C-C3AF-403D-ADB9-593C734B4EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24063C3C-C3AF-403D-ADB9-593C734B4EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24063C3C-C3AF-403D-ADB9-593C734B4EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24063C3C-C3AF-403D-ADB9-593C734B4EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9588807-B915-46FC-9334-6584A3C1B7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9588807-B915-46FC-9334-6584A3C1B7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9588807-B915-46FC-9334-6584A3C1B7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9588807-B915-46FC-9334-6584A3C1B7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0DF790-CCBC-4D4E-A670-946E73685F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD0DF790-CCBC-4D4E-A670-946E73685F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD0DF790-CCBC-4D4E-A670-946E73685F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD0DF790-CCBC-4D4E-A670-946E73685F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32044F19-953C-457D-B349-A48B1ACA5FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32044F19-953C-457D-B349-A48B1ACA5FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32044F19-953C-457D-B349-A48B1ACA5FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32044F19-953C-457D-B349-A48B1ACA5FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F93F4114-2970-4880-BCDA-2D6DC397216D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93F4114-2970-4880-BCDA-2D6DC397216D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93F4114-2970-4880-BCDA-2D6DC397216D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93F4114-2970-4880-BCDA-2D6DC397216D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6074165F-EC33-4CFD-A196-1724AFBD8A89}
+	EndGlobalSection
+EndGlobal
