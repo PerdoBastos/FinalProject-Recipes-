@@ -1,0 +1,15 @@
+﻿@page
+@model AssemblyCookieRecipe.WebApp.Pages.Categories.GetModel
+@{
+}
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control" value="@Model.Category.Id" disabled>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" value="@Model.Category.Name" disabled>
+    </div>
+    <button type="submit" class="btn btn-success">Back to list</button>
+</form>
