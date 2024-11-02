@@ -1,0 +1,45 @@
+﻿@page
+@model AssemblyCookieRecipe.WebApp.Pages.Categories.GetAllModel
+@{
+}
+<form method="post" class="row g-3 align-items-center">
+    <label>Insert new category</label>
+    <div class="col-auto">
+        <label class="col-form-label">Name</label>
+    </div>
+    <div class="col-auto">
+        <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-success">Insert</button>
+    </div>
+</form>
+
+<br>
+<br>
+<br>
+
+<table class="table">
+    <label>Category table</label>
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model.Categories)
+        {
+            <tr>
+                <th scope="row">@category.Id</th>
+                <td><a asp-page="/Categories/Get" asp-route-id="@category.Id">@category.Name</a></td>
+                <td>
+                    <a asp-page="/Categories/Delete" asp-route-id="@category.Id">Delete</a>
+                    /
+                    <a asp-page="/Categories/Update" asp-route-id="@category.Id">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
