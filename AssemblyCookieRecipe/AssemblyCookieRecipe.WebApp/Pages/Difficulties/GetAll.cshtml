@@ -1,0 +1,46 @@
+﻿@page
+@model AssemblyCookieRecipe.WebApp.Pages.Difficulties.GetAllModel
+@{
+}
+
+<form method="post" class="row g-3 align-items-center">
+    <label>Insert new category</label>
+    <div class="col-auto">
+        <label class="col-form-label">Name</label>
+    </div>
+    <div class="col-auto">
+        <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-success">Insert</button>
+    </div>
+</form>
+
+<br>
+<br>
+<br>
+
+<table class="table">
+    <label>Category table</label>
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var difficultie in Model.Difficulties)
+        {
+            <tr>
+                <th scope="row">@difficultie.Id</th>
+                <td><a asp-page="/Difficulties/Get" asp-route-id="@difficultie.Id">@difficultie.Name</a></td>
+                <td>
+                    <a asp-page="/Difficulties/Delete" asp-route-id="@difficultie.Id">Delete</a>
+                    /
+                    <a asp-page="/Difficulties/Update" asp-route-id="@difficultie.Id">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
