@@ -1,0 +1,19 @@
+﻿@page
+@model AssemblyCookieRecipe.WebApp.Pages.Difficulties.UpdateModel
+@{
+}
+
+<form method="post">
+    <div class="mb-3">
+        <input type="text" name="id" value="@Model.Difficultie.Id" hidden>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control" value="@Model.Difficultie.Id" disabled>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" value="@Model.Difficultie.Name">
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
