@@ -1,0 +1,45 @@
+﻿@page
+@model AssemblyCookieRecipe.WebApp.Pages.Ingredients.GetAllModel
+@{
+}
+<form method="post" class="row g-3 align-items-center">
+    <label>Insert new ingredient</label>
+    <div class="col-auto">
+        <label class="col-form-label">Name</label>
+    </div>
+    <div class="col-auto">
+        <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-success">Insert</button>
+    </div>
+</form>
+
+<br>
+<br>
+<br>
+
+<table class="table">
+    <label>Ingredients table</label>
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ingredient in Model.Ingredients)
+        {
+            <tr>
+                <th scope="row">@ingredient.Id</th>
+                <td><a asp-page="/Ingredients/Get" asp-route-id="@ingredient.Id">@ingredient.Name</a></td>
+                <td>
+                    <a asp-page="/Ingredients/Delete" asp-route-id="@ingredient.Id">Delete</a>
+                    /
+                    <a asp-page="/Ingredients/Update" asp-route-id="@ingredient.Id">Update</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
